@@ -10,18 +10,20 @@
 
 <body>
 	<div class="contenedor">
-		<h1></h1>
+		<h1>Juegos Retro</h1>
 
-		<p></p>
+		<p>Nuestra lista es exigente con las calificaciones, solo te mostraremos juegos que tengan una calificacion mayor a 6 y resaltaremos las super recomendadas que tengan calificación de 8 en adelante.</p>
 
 		<ul>
-			<li>
-				<h2></h2>
+			<li v-for="juego of juegos" v-if="juego.calificacion > 6">
+				<h2>{{juego.nombre}} : {{juego.anio}}</h2>
 								
-				<img />
+				<img :src="juego.portada" :alt="juego.alt"/>
 
-				<p> </p>
-				<p> </p>
+				<!--<p v-for="consol of juego.consola"> {{consol.keys()}} </p> -->
+				
+				
+				<p :class="juego.calificacion > 7 ? 'green' : 'red'"> Calificación: {{juego.calificacion}} </p>
 			</li>
 		</ul>
 	</div>
