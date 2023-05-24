@@ -20,7 +20,7 @@
 								
 				<img :src="juego.portada" :alt="juego.alt"/>
 
-				<!--<p v-for="consol of juego.consola"> {{consol.keys()}} </p> -->
+				<p v-for="consol of juego.consola"> {{consol}} </p>
 				
 				
 				<p :class="juego.calificacion > 7 ? 'green' : 'red'"> Calificación: {{juego.calificacion}} </p>
